@@ -46,6 +46,14 @@
             margin-top: 14vh;
         }
 
+        .finalEydia {
+            transform: rotate(90deg);
+        }
+
+        .rtl {
+            direction: rtl;
+        }
+
     </style>
 </head>
 <body>
@@ -97,11 +105,15 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <input v-model="name" type="text" class="form-control btn-outline-dark bg-light border border-dark text-dark text-right" id="exampleInputEmail1"
+                                    <input v-model="name" type="text"
+                                           class="rtl form-control btn-outline-dark bg-light border border-dark text-dark text-right"
+                                           id="exampleInputEmail1"
                                            aria-describedby="emailHelp" placeholder="اسم الشخص الي تريد تنطي عيدية">
                                 </div>
                                 <div class="form-group">
-                                    <input v-model="reason" type="text" class="form-control btn-outline-dark bg-light border border-dark text-dark text-right" id="exampleInputPassword1"
+                                    <input v-model="reason" type="text"
+                                           class="rtl form-control btn-outline-dark bg-light border border-dark text-dark text-right"
+                                           id="exampleInputPassword1"
                                            placeholder="ليش تشوف هذا الشخص يستاهل العيدية؟">
                                 </div>
                                 <button @click="showAfterForm" class="btn btn-outline-dark btn-sm">دز العيدية
@@ -127,15 +139,19 @@
                             <h4 class="text-center mt-2">{{name}}</h4>
                             <h5 class="text-center mt-2">{{reason}}</h5>
 
-                            <div class="row mt-2 mx-5 justify-content-center">
-                                <div class="col">
-                                    <img :src="edia" alt="" class="w-50">
-                                </div>
+                            <!--come here baby-->
+                            <div class="row justify-content-center align-items-center">
                                 <div class="col">
                                     <h5 class="text-center ">و هاي العيدية</h5>
                                     <h5 class="text-center">:')</h5>
                                 </div>
                             </div>
+                            <div class="row justify-content-center align-items-center finalEydia">
+                                <div class="col">
+                                    <img :src="edia" alt="" class=" w-75">
+                                </div>
+                            </div>
+
 
                         </div>
                     </div>
@@ -163,7 +179,7 @@
         el: "#app",
         data: {
             thousand: "https://i.ibb.co/bW5fMJh/1000.jpg",
-            twoHundredAndFifty: "https://i.ibb.co/RYspBp1/250.jpg",
+            twoHundredAndFifty: "https://i.ibb.co/frthFKG/250.jpg",
             fiveHundred: "https://i.ibb.co/tZB8XSG/500.jpg",
 
             image: "",
