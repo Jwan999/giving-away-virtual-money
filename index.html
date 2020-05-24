@@ -1,20 +1,29 @@
 <!doctype html>
 <html lang="en" class="h-100">
 <head>
-    <!-- Required meta tags -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F56B3ZXXFY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-F56B3ZXXFY');
+    </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link rel="icon" href="default.png">
-
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
           integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500&display=swap" rel="stylesheet">
     <title>Eydia Time</title>
     <style>
         body {
-            /*font-family: 'Raleway', sans-serif;*/
             background-color: #5C348F;
             font-family: 'Tajawal', sans-serif;
         }
@@ -52,7 +61,6 @@
         .rtl {
             direction: rtl;
         }
-
     </style>
 </head>
 <body>
@@ -67,7 +75,6 @@
                         <img :src="getImage('1000','v')" alt="" class="w-100 grow">
                     </div>
                 </div>
-
                 <div class="col-md-2 col-4">
                     <div @click="setEdia('250')" class="card shadow bg-secondary">
                         <img :src="getImage('250','v')" alt="" class="w-100 grow">
@@ -137,7 +144,6 @@
                             </div>
                             <h4 class="text-center mt-4 text-xl">{{name}}</h4>
                             <h5 class="text-center mt-2 text-md">{{reason}}</h5>
-
                             <!--come here baby-->
                             <div class="row justify-content-center align-items-center">
                                 <div class="col">
@@ -150,13 +156,11 @@
                                 </div>
                             </div>
 
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
 </div>
 
@@ -176,7 +180,6 @@
     new Vue({
         el: "#app",
         data: {
-
             image: "",
             name: "",
             reason: "",
@@ -195,7 +198,6 @@
                         return `/images/250-${direction}.jpg`;
                     case "500":
                         return `/images/500-${direction}.jpg`;
-
                 }
             },
             setEdia(edia) {
@@ -211,7 +213,6 @@
                     this.afterForm = true;
                 }
             },
-
             onFileChange(e) {
                 console.log(e);
                 var files = e.target.files || e.dataTransfer.files;
